@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/contact', 'ContactController@contact');
 
 Route::get('/contact', function () {
     return view('contact');

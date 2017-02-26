@@ -25,28 +25,60 @@
         <main>
             <section>
                 <h2>Contactez-moi</h2>
-                <form action="#" method="post">
+                <form action="/contact" method="post">
+                    {{ csrf_field() }}
+
+                        @if (session('test'))
+
+                        <p>Votres message a bien été envoyé à Vincent</p>
+
+                        @endif
                     <fieldset>
+
+
+
                         <p>
                             <label for="nom">Nom : </label><br>
-                            <input type="text" value="" name="nom" id="nom">
+                            <input type="text" value="{{ old('nom') }}" name="nom" id="nom">
+                        @if ($errors->has('nom'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('nom') }}</strong>
+                            </span>
+                        @endif
                         </p>
                         <p>
-                            <label for="prenom">Prénoms : </label><br>
-                            <input type="text" value="" name="prenom" id="prenom">
+                            <label for="prenom">Prénom : </label><br>
+                            <input type="text" value="{{ old('prenom') }}" name="prenom" id="prenom">
+                        @if ($errors->has('prenom'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('prenom') }}</strong>
+                            </span>
+                        @endif
                         </p>
                         <p>
                             <label for="mail">E-mail : </label><br>
-                            <input type="email" value="" name="mail" id="mail">
+                            <input type="email" value="{{ old('mail') }}" name="mail" id="mail">
+                        @if ($errors->has('mail'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('mail') }}</strong>
+                            </span>
+                        @endif
                         </p>
                         <p>
                             <label for="text">Votre message : </label><br>
-                            <textarea cols="50" rows="10" name="text" id="text"></textarea>
+                            <textarea cols="50" rows="10" name="text" id="text">{{ old('text') }}</textarea>
+                        @if ($errors->has('text'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('text') }}</strong>
+                            </span>
+                        @endif
                         </p>
                         <p>
                             <button type="submit" id="envoi" name="envoi">Envoyer</button>
                         </p>
+
                     </fieldset>
+
                 </form>
             </section>
         </main>
