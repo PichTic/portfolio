@@ -470,6 +470,17 @@ h1 {
     text-align: center;
 }
 
+span {
+    font-style: italic;
+    color: #666;
+
+}
+
+section {
+    border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    max-width: 60em;
+}
 
 nav {
 
@@ -492,11 +503,6 @@ nav ul li a {
     font-size: 1.3em;
 }
 
-section {
-    border-radius: 10px 10px 10px 10px;
-    border: 0px solid #000000;
-    max-width: 60em;
-}
 
 main {
     padding-top: 20em;
@@ -525,12 +531,12 @@ nav a::after {
 }
 
 nav a::before {
-    border-top: 2px solid #666;
+    border-top: 1px solid #666;
     background: transparent;
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
-    -webkit-transform: translateY( calc(100% - 2px) );
-    transform: translateY( calc(100% - 2px) );
+    -webkit-transform: translateY( calc(100% - 1px) );
+    transform: translateY( calc(100% - 1px) );
 }
 
 nav a:hover::before,
@@ -547,12 +553,6 @@ nav a:focus::after {
     transform: translateX(0);
 }
 
-/*a::after {
-    z-index: -1;
-    background: rgba(0,0,0,0.7);
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-}*/
 
 nav a:hover::after,
 nav a:focus::after {

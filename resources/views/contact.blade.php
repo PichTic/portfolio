@@ -17,7 +17,7 @@
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="cv.html" title="Vers mon CV">CV</a></li>
                     <li><a href="unilim.html" title="Vers mes projets unilim">Projets</a></li>
-                    <li><a href="propos.html" title="A propos de moi">A propos</a></li>
+                    <!--<li><a href="propos.html" title="A propos de moi">A propos</a></li>-->
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
